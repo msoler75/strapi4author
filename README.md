@@ -13,10 +13,10 @@ I made this example to show a policy/middleware/controller to manage ownership o
 
 ### Clue files
 
-- **![src/policies/is-owner.js](https://github.com/msoler75/strapi4author/blob/master/src/policies/is-owner.js)**
-- **![src/middleware/assign-owner.js](https://github.com/msoler75/strapi4author/blob/master/src/middleware/assign-owner.js)**
-- **![src/api/note/routes/note.js](https://github.com/msoler75/strapi4author/blob/master/src/api/note/routes/note.js)**
-- **![src/api/note/controllers/note.js](https://github.com/msoler75/strapi4author/blob/master/src/api/note/controllers/note.js)**
+- **![src/policies/is-owner.js](src/policies/is-owner.js)**
+- **![src/middleware/assign-owner.js](src/middleware/assign-owner.js)**
+- **![src/api/note/routes/note.js](src/api/note/routes/note.js)**
+- **![src/api/note/controllers/note.js](src/api/note/controllers/note.js)**
 
 
 ### But don't forget to configure...
@@ -76,7 +76,7 @@ It creates a policy file called ./src/policies/is-owner.js
 
 **7th**: we edit the file is-owner.js
 
-See ![src/policies/is-owner.js](https://github.com/msoler75/strapi4author/blob/master/src/policies/is-owner.js)
+See ![src/policies/is-owner.js](src/policies/is-owner.js)
 
 
 **8th**: we generate middleware assign-owner.js
@@ -96,19 +96,19 @@ Done in 88.63s.
 
 **9th**: we edit assign-owner.js
 
-See ![middleware/assign-owner.js](https://github.com/msoler75/strapi4author/blob/master/src/middleware/assign-owner.js)
+See ![middleware/assign-owner.js](src/middleware/assign-owner.js)
 
 
 **10th**: we edit ./src/api/note/routes/note.js and assign middleware and policies
 
-See ![routes/note.js](https://github.com/msoler75/strapi4author/blob/master/src/api/note/routes/note.js)
+See ![routes/note.js](src/api/note/routes/note.js)
 
 
 *11th:* to allow users only view their own notes (and no other users notes) you must customize controller. 
 
 So you edit ./src/api/note/controllers/note.js
 
-See ![controllers/note.js](https://github.com/msoler75/strapi4author/blob/master/src/api/note/controllers/note.js)
+See ![controllers/note.js](src/api/note/controllers/note.js)
 
 
 **12th**: you must configure permissions in settings -> roles to only authenticated users to access notes actions
