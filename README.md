@@ -1,5 +1,4 @@
-# 🚀 Strapi v4 owner (authored) content example
-
+# 🚀 Strapi v4 owner (authored) content example with global policy and middleware
 
 
 ### Authored content
@@ -9,21 +8,26 @@ I made this example to show a policy/middleware/controller to manage ownership o
 - The middleware assign author to each content automatically
 - The policy check if content is acceded by his owner (author)
 - The policy and middleware are global to allow be used in more than one content type (DRY concept)
-
+- The controller only lists the own content (method find) applying a filter
+- In route file is set the configuration of each method actions
 
 ### Clue files
 
-- **![src/policies/is-owner.js](src/policies/is-owner.js)**
-- **![src/middleware/assign-owner.js](src/middleware/assign-owner.js)**
-- **![src/api/note/routes/note.js](src/api/note/routes/note.js)**
-- **![src/api/note/controllers/note.js](src/api/note/controllers/note.js)**
+- Policy: **![src/policies/is-owner.js](src/policies/is-owner.js)**
+- Middleware: **![src/middleware/assign-owner.js](src/middleware/assign-owner.js)**
+- Controller: **![src/api/note/controllers/note.js](src/api/note/controllers/note.js)**
+- Route Config: **![src/api/note/routes/note.js](src/api/note/routes/note.js)**
 
 
 ### But don't forget to configure...
 - the content type adding a field relation named *author*
 - configure properly role settings (steps 12 & 13) for authenticated users
 
+### Notes & Tasks
 
+I created two content types: Notes and Task. Intended to be private to each user. 
+
+Both types use global policy and middleware and have custom controller to method find.
 
 ### How was the setup
 
@@ -96,19 +100,19 @@ Done in 88.63s.
 
 **9th**: we edit assign-owner.js
 
-See ![middleware/assign-owner.js](src/middleware/assign-owner.js)
+See ![src/middleware/assign-owner.js](src/middleware/assign-owner.js)
 
 
 **10th**: we edit ./src/api/note/routes/note.js and assign middleware and policies
 
-See ![routes/note.js](src/api/note/routes/note.js)
+See ![api/note/routes/note.js](src/api/note/routes/note.js)
 
 
 *11th:* to allow users only view their own notes (and no other users notes) you must customize controller. 
 
 So you edit ./src/api/note/controllers/note.js
 
-See ![controllers/note.js](src/api/note/controllers/note.js)
+See ![src/api/note/controllers/note.js](src/api/note/controllers/note.js)
 
 
 **12th**: you must configure permissions in settings -> roles to only authenticated users to access notes actions
