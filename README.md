@@ -125,10 +125,15 @@ See ![src/api/note/controllers/note.js](src/api/note/controllers/note.js)
 ![](docimages/Settings-Roles-user-permission.png)
 
 
-**14th**: you can create some users and check each one logging in (you can use postman)
+**14th**: you can create some user and log in (here I used postman)
 
+Logging in
 ![](docimages/Postman-1-auth.png)
+
+Copy the token to auth bearer field
 ![](docimages/postman-2-we_put_bearer_auth.png)
+
+Once logged in you can create the first note
 ![](docimages/postman-3-first-note-created.png)
 
 
