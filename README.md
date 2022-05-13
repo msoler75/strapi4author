@@ -125,10 +125,11 @@ See ![controllers/note.js](src/api/note/controllers/note.js)
 
 ![](docimages/Postman-1-auth.png)
 ![](docimages/postman-2-we_put_bearer_auth.png)
-![](docimages/Postman-3-createnote.png)
+![](docimages/postman-3-first-note-created.png)
+
 
 You can check that author automatically assigned:
-![](docimages/first-note-created.png)
+![](docimages/first-note.png)
 
 
 **15th**: if you try to login with another user and try to update or delete another author content you will get forbidden error (403)
