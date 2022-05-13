@@ -136,8 +136,16 @@ You can check that author automatically assigned:
 ![](docimages/first-note.png)
 
 
-**15th**: if you try to login with another user and try to update or delete another author content you will get forbidden error (403)
+**15th**: if you try to update owned content will succeed, but if we change owner you will get forbidden error (403)
 
+Updating note #31:
+![](docimages/Postman-4-update.png)
+
+Changing author of that content manually in backend:
+![](docimages/changing-owner-manually.png)
+
+Now trying to update is forbidden
+![](docimages/Postman-5-updated-forbidden.png)
 
 **16th**: optionally you can create another content-type (e.g. tasks) to reuse global policy and middleware created
 
