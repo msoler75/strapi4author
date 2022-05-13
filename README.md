@@ -6,7 +6,23 @@
 
 I made this example to show a policy/middleware/controller to manage ownership of content.
 
-Clue files are:
+- The middleware assign author to each content automatically
+- The policy check if content is acceded by his owner (author)
+- The policy and middleware are global to allow be used in more than one content type (DRY concept)
+
+
+### Clue files
+
+- **![src/policies/is-owner.js](https://github.com/msoler75/strapi4author/blob/master/src/policies/is-owner.js)**
+- **![src/middleware/assign-owner.js](https://github.com/msoler75/strapi4author/blob/master/src/middleware/assign-owner.js)**
+- **![src/api/note/routes/note.js](https://github.com/msoler75/strapi4author/blob/master/src/api/note/routes/note.js)**
+- **![src/api/note/controllers/note.js](https://github.com/msoler75/strapi4author/blob/master/src/api/note/controllers/note.js)**
+
+
+### But don't forget to configure...
+- the content type adding a field relation named *author*
+- configure properly role settings (steps 12 & 13) for authenticated users
+
 
 
 ### How was the setup
@@ -115,7 +131,7 @@ You can check that author automatically assigned:
 ![](docimages/first-note-created.png)
 
 
-**15th**: if you try to login with another user and try to update or delete another author content you will get forbidden error
+**15th**: if you try to login with another user and try to update or delete another author content you will get forbidden error (403)
 
 
 **16th**: optionally you can create another content-type (e.g. tasks) to reuse global policy and middleware created
