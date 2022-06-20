@@ -14,7 +14,7 @@ I made this example to show a policy/middleware/controller to manage ownership o
 ### Clue files
 
 - Policy: **![src/policies/is-owner.js](src/policies/is-owner.js)**
-- Middleware: **![src/middlewares/assign-owner.js](src/middleware/assign-owner.js)**
+- Middleware: **![src/middlewares/assign-owner.js](src/middlewares/assign-owner.js)**
 - Controller: **![src/api/note/controllers/note.js](src/api/note/controllers/note.js)**
 - Route Config: **![src/api/note/routes/note.js](src/api/note/routes/note.js)**
 
@@ -100,7 +100,7 @@ Done in 88.63s.
 
 **9th**: we edit assign-owner.js
 
-See ![src/middleware/assign-owner.js](src/middlewares/assign-owner.js)
+See ![src/middlewares/assign-owner.js](src/middlewares/assign-owner.js)
 
 
 **10th**: we edit ./src/api/note/routes/note.js and assign middleware and policies
